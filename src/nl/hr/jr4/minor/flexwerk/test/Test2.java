@@ -1,5 +1,8 @@
 package nl.hr.jr4.minor.flexwerk.test;
 
+import java.util.Iterator;
+import java.util.Set;
+
 import com.qubulus.qps.Intents;
 import com.qubulus.qps.PositioningManager;
 
@@ -35,7 +38,16 @@ public class Test2 extends Activity {
         public void onReceive(Context context, Intent intent) {
         	// Implement your logic here (show position on the map for example)
         	
-        	Log.w("QPS", ""); 
+        	//Bundle extras = intent.getExtras();
+        	//Double geoLong =  extras.getDouble("Intents.Position.Extras.LATITUDE");
+        	//Log.w("QPS", ""+extras.keySet().toString()); 
+        	
+        	Bundle extras = getIntent().getExtras();
+        	Set<String> ks = extras.keySet();
+        	Iterator<String> iterator = ks.iterator();
+        	while (iterator.hasNext()) {
+        	    Log.d("KEY", iterator.next());
+        	}
         }
       };
 
