@@ -10,4 +10,12 @@
     <string name="qps_switch_floor_queue_size">3</string>
     <string name="qps_switch_floor_queue_time_tollerance">30</string>
     
+    <string name="dummy_map0">1</string>
+    <string name="dummy_lat0">55.611501</string>
+    <string name="dummy_lon0">13.010363</string>
+    <string name="dummy_map1">2</string>
+    <string name="dummy_lat1">55.611695</string>
+    <string name="dummy_lon1">13.010420</string>
+    <string name="dummy_delay">1000</string>
+    
 </resources>

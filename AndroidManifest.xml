@@ -26,8 +26,15 @@
             </intent-filter>
         </activity>
         
+        <!--
 		<service android:name="com.qubulus.qps.RemotePositioningService">
 			<intent-filter>
+				<action android:name="com.qubulus.qps.REQUEST" />
+			</intent-filter>
+		</service>
+		-->
+		<service android:name="com.qubulus.qps.DummyPositioningService">
+		    <intent-filter>
 				<action android:name="com.qubulus.qps.REQUEST" />
 			</intent-filter>
 		</service>
