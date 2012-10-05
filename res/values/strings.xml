@@ -19,6 +19,9 @@
     <string name="dummy_map1">2</string>
     <string name="dummy_lat1">55.611695</string>
     <string name="dummy_lon1">13.010420</string>
-    <string name="dummy_delay">1000</string>
+    <string name="dummy_map2">2</string>
+    <string name="dummy_lat2">55.611665</string>
+    <string name="dummy_lon2">13.010440</string>
+    <string name="dummy_delay">500</string>
     
 </resources>

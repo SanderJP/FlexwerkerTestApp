@@ -38,16 +38,20 @@ public class Test2 extends Activity {
         public void onReceive(Context context, Intent intent) {
         	// Implement your logic here (show position on the map for example)
         	
-        	//Bundle extras = intent.getExtras();
-        	//Double geoLong =  extras.getDouble("Intents.Position.Extras.LATITUDE");
-        	//Log.w("QPS", ""+extras.keySet().toString()); 
+        	Bundle extras = intent.getExtras();
+        	Double geoLat =  extras.getDouble("LONGITTUDE");
+        	Double geoLong =  extras.getDouble("LATITUDE");
+        	Log.w("QPS", geoLat + ", " + geoLong); 
+        	Log.w("Incoming", "Broadcasted");
         	
-        	Bundle extras = getIntent().getExtras();
-        	Set<String> ks = extras.keySet();
+        	/*
+        	Bundle extras2 = intent.getExtras();
+        	Set<String> ks = extras2.keySet();
         	Iterator<String> iterator = ks.iterator();
         	while (iterator.hasNext()) {
         	    Log.d("KEY", iterator.next());
         	}
+        	//*/
         }
       };
 
