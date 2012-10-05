@@ -22,7 +22,7 @@ public class Test2 extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.test2);
         
         PositioningManager manager = PositioningManager.get(this);
         manager.requestPosition();
