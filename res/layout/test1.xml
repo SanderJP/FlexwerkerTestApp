@@ -4,5 +4,73 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
+    <TextView
+        android:id="@+id/currentStatusTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/currentStatusString" />
+    <TextView
+        android:id="@+id/currentAccelTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/currentAccelString" />
+    <TextView
+        android:id="@+id/currentIntervalTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/currentIntervalString" />
+    <TextView
+        android:id="@+id/currentThresholdTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/currentThresholdString" />
+    <TextView
+        android:id="@+id/currentCounterTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/currentCounterString" />
+    
+    <TextView
+        android:id="@+id/intervalTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intervalString" />
+    <EditText
+	    android:id="@+id/intervalEditText"
+	    android:inputType="number"
+	    android:hint="@string/intervalInputString"
+	    android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:textSize="18sp"></EditText>
+    <TextView
+        android:id="@+id/thresholdTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/thresholdString" />
+    <EditText
+	    android:id="@+id/thresholdEditText"
+	    android:inputType="number"
+	    android:hint="@string/thresholdInputString"
+	    android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:textSize="18sp"></EditText>
+    <TextView
+        android:id="@+id/counterTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/counterString" />
+    <EditText
+	    android:id="@+id/counterEditText"
+	    android:inputType="number"
+	    android:hint="@string/counterInputString"
+	    android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:textSize="18sp"></EditText>
+	<Button
+	    android:id="@+id/submitInputBtn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/submitInputString"
+	    ></Button>
 
 </LinearLayout>

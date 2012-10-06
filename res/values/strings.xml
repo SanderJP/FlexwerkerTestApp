@@ -24,4 +24,22 @@
     <string name="dummy_lon2">13.010440</string>
     <string name="dummy_delay">500</string>
     
+    <string name="intervalString">Het aantal seconden beweging voordat de status eventueel wordt aangepast</string>
+    <string name="intervalInputString">Timer in seconden</string>
+    <string name="intervalSubmitString">Timer opslaan</string>
+    <string name="thresholdString">De threshold waarboven de beweging wordt geregistreerd</string>
+    <string name="thresholdInputString">Threshold tussen 0 en 15</string>
+    <string name="thresholdSubmitString">Threshold opslaan</string>
+    <string name="counterString">Het aantal geregistreerde bewegingen waarna de status wordt aangepast</string>
+    <string name="counterInputString">Counter int</string>
+    
+    <string name="currentStatusString">Huidige status:</string>
+    <string name="currentAccelString">Huidige acceleratie:</string>
+    
+    <string name="currentIntervalString">Huidige timer:</string>
+    <string name="currentThresholdString">Huidige threshold:</string>
+    <string name="currentCounterString">Ingestelde counter:</string>
+    
+    <string name="submitInputString">Instellingen opslaan</string>
+    
 </resources>
