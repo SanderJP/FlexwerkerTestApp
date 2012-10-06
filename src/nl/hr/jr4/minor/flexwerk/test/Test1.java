@@ -1,6 +1,7 @@
 package nl.hr.jr4.minor.flexwerk.test;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 public class Test1 extends Activity {
@@ -9,6 +10,10 @@ public class Test1 extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test1);
+        
+        LogEngine le = LogEngine.getInstance();
+        //le.log("Test1", "Dit is de test!");
+        le.displayLog();
         
     }
 }

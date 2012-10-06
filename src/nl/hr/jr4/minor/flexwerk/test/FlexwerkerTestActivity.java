@@ -18,7 +18,10 @@ public class FlexwerkerTestActivity extends Activity implements OnClickListener 
         btn1.setOnClickListener(this);
         Button btn2 = (Button) findViewById(R.id.btn_test2);
         btn2.setOnClickListener(this);
-        
+
+        // Set the current context (this) in the 'singleton' contextHolder.
+        ContextHolder ch = ContextHolder.getInstance();
+        ch.setContext(this);
     }
 
 	public void onClick(View v) {

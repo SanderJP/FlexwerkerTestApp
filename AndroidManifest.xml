@@ -28,6 +28,8 @@
         </activity>
         <activity android:name=".Test1"></activity>
         <activity android:name=".Test2"></activity>
+        <activity android:name=".ContextHolder"></activity>
+        <activity android:name=".DisplayLog"></activity>
         
         <!--
 		<service android:name="com.qubulus.qps.RemotePositioningService">
