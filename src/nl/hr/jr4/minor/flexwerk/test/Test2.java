@@ -27,7 +27,6 @@ public class Test2 extends Activity {
         PositioningManager manager = PositioningManager.get(this);
         manager.requestPosition();
         
-        
         intentFilter.addAction(Intents.Position.ACTION);
         intentFilter.addAction(Intents.UnknwownPosition.ACTION);
         this.registerReceiver(mQpsReceiver, intentFilter);
@@ -66,7 +65,8 @@ public class Test2 extends Activity {
 	@Override
 	protected void onStop() {
 		
-		stopQps();
+		//stopQps();
+		
 		
 		super.onStop();
 	}

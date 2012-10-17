@@ -7,22 +7,12 @@
     <string name="btn_test1">Test 1: Status (accelerationmeter)</string>
     <string name="btn_test2">Test 2: Coords (Qubulus)</string>
 
-    <string name="qps_customer_id">YOUR_CUSTOMER_ID</string>
-    <string name="qps_site_id">YOUR_SITE_ID</string>
+    <!-- Qubulus settings (required) -->
+    <string name="qps_customer_id">kevinvaningen</string>
+    <string name="qps_site_id">1805</string>
     <string name="qps_server">api-dev.loclizard.com:8080</string>
     <string name="qps_switch_floor_queue_size">3</string>
     <string name="qps_switch_floor_queue_time_tollerance">30</string>
-    
-    <string name="dummy_map0">1</string>
-    <string name="dummy_lat0">55.611501</string>
-    <string name="dummy_lon0">13.010363</string>
-    <string name="dummy_map1">2</string>
-    <string name="dummy_lat1">55.611695</string>
-    <string name="dummy_lon1">13.010420</string>
-    <string name="dummy_map2">2</string>
-    <string name="dummy_lat2">55.611665</string>
-    <string name="dummy_lon2">13.010440</string>
-    <string name="dummy_delay">500</string>
     
     <string name="intervalString">Het aantal seconden beweging voordat de status eventueel wordt aangepast</string>
     <string name="intervalInputString">Timer in seconden</string>
