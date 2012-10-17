@@ -51,7 +51,7 @@ public class LogEngine {
 		Log.w(TAG,""+log);
 		FileOutputStream fos;
 		Date date = new Date();
-		String logRow = new String((date.getTime()/1000) + "," + tag + "," + msg + "\n");
+		String logRow = new String((date.getTime()/100) + "," + tag + "," + msg + "\n");
 		//Log.w("FlexwerkTest", "Logged: "+logRow);
 		byte[] data = logRow.getBytes();
 		try {

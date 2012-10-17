@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:scrollbars="vertical">
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
     
     <TextView
         android:id="@+id/currentStatusTextView"
@@ -20,6 +24,11 @@
         android:layout_height="wrap_content"
         android:text="@string/currentIntervalString" />
     <TextView
+        android:id="@+id/currentSecondTimerTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/currentSecondTimerString" />
+    <TextView
         android:id="@+id/currentThresholdTextView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -30,6 +39,26 @@
         android:layout_height="wrap_content"
         android:text="@string/currentCounterString" />
     
+    
+	<Button
+	    android:id="@+id/startWalkingBtn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/startWalkingString"
+	    ></Button>
+	<Button
+	    android:id="@+id/stopWalkingBtn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/stopWalkingString"
+	    ></Button>
+	<Button
+	    android:id="@+id/doSomethingBtn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/doSomethingString"
+	    ></Button>
+    
     <TextView
         android:id="@+id/intervalTextView"
         android:layout_width="fill_parent"
@@ -37,6 +66,18 @@
         android:text="@string/intervalString" />
     <EditText
 	    android:id="@+id/intervalEditText"
+	    android:inputType="number"
+	    android:hint="@string/intervalInputString"
+	    android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:textSize="18sp"></EditText>
+    <TextView
+        android:id="@+id/secondTimerTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/secondTimerString" />
+    <EditText
+	    android:id="@+id/secondTimerEditText"
 	    android:inputType="number"
 	    android:hint="@string/intervalInputString"
 	    android:layout_height="wrap_content"
@@ -74,3 +115,4 @@
 	    ></Button>
 
 </LinearLayout>
+</ScrollView>

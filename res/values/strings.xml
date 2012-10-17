@@ -17,6 +17,7 @@
     <string name="intervalString">Het aantal seconden beweging voordat de status eventueel wordt aangepast</string>
     <string name="intervalInputString">Timer in seconden</string>
     <string name="intervalSubmitString">Timer opslaan</string>
+    <string name="secondTimerString">Het aantal seconden als de status op niet beschikbaar staat</string>
     <string name="thresholdString">De threshold waarboven de beweging wordt geregistreerd</string>
     <string name="thresholdInputString">Threshold tussen 0 en 15</string>
     <string name="thresholdSubmitString">Threshold opslaan</string>
@@ -27,8 +28,13 @@
     <string name="currentAccelString">Huidige acceleratie:</string>
     
     <string name="currentIntervalString">Huidige timer:</string>
+    <string name="currentSecondTimerString">Tweede timer:</string>
     <string name="currentThresholdString">Huidige threshold:</string>
     <string name="currentCounterString">Ingestelde counter:</string>
+    
+    <string name="startWalkingString">Start lopen</string>
+    <string name="stopWalkingString">Stop lopen</string>
+    <string name="doSomethingString">Doe iets met de telefoon</string>
     
     <string name="submitInputString">Instellingen opslaan</string>
     
