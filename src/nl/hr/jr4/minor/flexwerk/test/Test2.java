@@ -49,7 +49,7 @@ public class Test2 extends Activity implements SensorEventListener{
         	Bundle extras = intent.getExtras();
         	Double geoLat =  extras.getDouble("LONGITTUDE");
         	Double geoLng =  extras.getDouble("LATITUDE");
-        	Log.w("QPS", geoLat + ", " + geoLng); 
+        	Log.w("QPS Coords", geoLat + ", " + geoLng); 
         	Log.w("Incoming", "Broadcasted");
         	
         	/*
