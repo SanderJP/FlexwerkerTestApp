@@ -20,12 +20,19 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
 
-public class Test2 extends Activity implements SensorEventListener{
+public class Test2 extends Activity implements SensorEventListener, OnClickListener {
 	
 	IntentFilter intentFilter = new IntentFilter();
 	private LogEngine _le;
 	private String _logFile = "test2.txt";
+	private PositioningManager manager;
+	private Button _btn;
+	private Button _nextBtn;
 	
     /** Called when the activity is first created. */
     @Override
@@ -33,8 +40,13 @@ public class Test2 extends Activity implements SensorEventListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test2);
         
-        PositioningManager manager = PositioningManager.get(this);
-        manager.requestPosition();
+        manager = PositioningManager.get(this);
+        //manager.requestPosition();
+        
+        _btn = (Button) findViewById(R.id.requestPositionBtn);
+        _btn.setOnClickListener(this);
+        _nextBtn = (Button) findViewById(R.id.nextPositionBtn);
+        _nextBtn.setOnClickListener(this);
         
         intentFilter.addAction(Intents.Position.ACTION);
         intentFilter.addAction(Intents.UnknwownPosition.ACTION);
@@ -47,45 +59,17 @@ public class Test2 extends Activity implements SensorEventListener{
         	// Implement your logic here (show position on the map for example)
         	
         	Bundle extras = intent.getExtras();
-        	Double geoLat =  extras.getDouble("LONGITTUDE");
-        	Double geoLng =  extras.getDouble("LATITUDE");
-        	Log.w("QPS Coords", geoLat + ", " + geoLng); 
+        	Double geoLat =  extras.getDouble("LATITUDE");
+        	Double geoLng =  extras.getDouble("LONGITUDE");
+        	Log.w("QPS", geoLat + ", " + geoLng);
         	Log.w("Incoming", "Broadcasted");
         	
-        	/*
-        	// Todo:
-        	// Compare Qubulus coords with GPS coords
-        	
-        	// Get the location manager
-    		LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-    		// Define the criteria how to select the locatioin provider -> use
-    		// default
-    		Criteria criteria = new Criteria();
-    		String provider = locationManager.getBestProvider(criteria, false);
-    		Location location = locationManager.getLastKnownLocation(provider);
-    		
-    		Double gpsLng = null;
-			Double gpsLat = null;
-    		// Initialize the location fields
-    		if (location != null) {
-    			System.out.println("Provider " + provider + " has been selected.");
-    			gpsLat = (Double) (location.getLatitude() * 1000000);
-    			gpsLng = (Double) (location.getLongitude() * 1000000);
-    			
-    			//GeoPoint gp = new GeoPoint(lat, lng));
-    		}
-    		
-			if(gpsLat == geoLat && gpsLng == geoLng){
-    			Log.w("Impossible", "You'll never see this in logcat");
-    		}
 			
 			// Get LogEngine
 			_le = LogEngine.getInstance();
 			
-			// Log Qubulus geocoords and GPS geocoords
+			// Log Qubulus geocoords
 			_le.log("QubuGeo", geoLat + ", " + geoLng, _logFile);
-			_le.log("QubuGeo", gpsLat + ", " + gpsLng, _logFile);
-        	*/
         	
         	/*
         	Bundle extras2 = intent.getExtras();
@@ -117,10 +101,10 @@ public class Test2 extends Activity implements SensorEventListener{
       
      
 	private void stopQps(){
-		this.unregisterReceiver(mQpsReceiver);
 
-	     PositioningManager manager = PositioningManager.get(this);
-	     manager.stopService();
+		PositioningManager manager = PositioningManager.get(this);
+		manager.stopService();
+		this.unregisterReceiver(mQpsReceiver);
 	}
 
 	public void onAccuracyChanged(Sensor arg0, int arg1) {
@@ -131,6 +115,19 @@ public class Test2 extends Activity implements SensorEventListener{
 	public void onSensorChanged(SensorEvent event) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.nextPositionBtn :
+			_le.log("QubuGeo", " ", _logFile);
+			Toast.makeText(getBaseContext(), "Nieuwe regel", 150).show();
+			break;
+		case R.id.requestPositionBtn :
+			Toast.makeText(getBaseContext(), "clicked!", 150).show();
+			manager.requestPosition();
+			break;
+		}
 	}
 
    

@@ -4,5 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
+	<Button
+	    android:id="@+id/requestPositionBtn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/requestPositionString"
+	    ></Button>
+	<Button
+	    android:id="@+id/nextPositionBtn"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/nextPositionString"
+	    ></Button>
 
 </LinearLayout>

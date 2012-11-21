@@ -8,6 +8,7 @@ import java.util.Date;
 import android.content.Intent;
 import android.os.Environment;
 import android.util.Log;
+import android.widget.Toast;
 
 public class LogEngine {
 
@@ -16,7 +17,7 @@ public class LogEngine {
 	public static final String logFilePath = "flexwerkerTest";
 	private static LogEngine _le;
 	private File _logFile;
-	private ContextHolder ch;
+	private ContextHolder _ch;
 	
 	public static LogEngine getInstance(){
 		if(_le == null){
@@ -33,7 +34,7 @@ public class LogEngine {
         // get the file
         _logFile = getLogFile(GENERAL_LOG);
         // get context
-        ch = ContextHolder.getInstance();
+        _ch = ContextHolder.getInstance();
 	}
 	
 	private File getLogFile(String fileName) {
@@ -49,6 +50,7 @@ public class LogEngine {
 	public void log(String tag, String msg, String logFile) {
 		File log = (logFile.equals("")) ? getLogFile(GENERAL_LOG) : getLogFile(logFile);
 		Log.w(TAG,""+log);
+		Toast.makeText(_ch.getContext(), ""+msg, 500).show();
 		FileOutputStream fos;
 		Date date = new Date();
 		String logRow = new String((date.getTime()/100) + "," + tag + "," + msg + "\n");
@@ -75,13 +77,13 @@ public class LogEngine {
 			File f = getLogFile(logFile);
 			// if file exists
 			if (f.exists()) {
-				ToastSingleton.makeToast(ch.getContext(), "Logfile "+logFile+" is deleted");
+				ToastSingleton.makeToast(_ch.getContext(), "Logfile "+logFile+" is deleted");
 				return f.delete();
 			} else {
-				ToastSingleton.makeToast(ch.getContext(), "Logfile "+logFile+" does not exist");
+				ToastSingleton.makeToast(_ch.getContext(), "Logfile "+logFile+" does not exist");
 			}
 		} else {
-			ToastSingleton.makeToast(ch.getContext(), "No log file specified");
+			ToastSingleton.makeToast(_ch.getContext(), "No log file specified");
 		}
 		return false;
 	}
@@ -89,9 +91,9 @@ public class LogEngine {
 	public void displayLog(String logFile) {
 		File f = getLogFile(logFile);
 		if (f.exists()) {
-			Intent i = new Intent(ch.getContext(), DisplayLog.class);
+			Intent i = new Intent(_ch.getContext(), DisplayLog.class);
 			i.putExtra("logFile", logFile);
-			ch.getContext().startActivity(i);
+			_ch.getContext().startActivity(i);
 		}
 	}
 }

@@ -9,7 +9,7 @@
 
     <!-- Qubulus settings (required) -->
     <string name="qps_customer_id">kevinvaningen</string>
-    <string name="qps_site_id">1805</string>
+    <string name="qps_site_id">1806</string>
     <string name="qps_server">api-dev.loclizard.com:8080</string>
     <string name="qps_switch_floor_queue_size">3</string>
     <string name="qps_switch_floor_queue_time_tollerance">30</string>
@@ -37,5 +37,8 @@
     <string name="doSomethingString">Doe iets met de telefoon</string>
     
     <string name="submitInputString">Instellingen opslaan</string>
+    
+    <string name="requestPositionString">Positie ophalen</string>
+    <string name="nextPositionString">Volgende positie</string>
     
 </resources>
